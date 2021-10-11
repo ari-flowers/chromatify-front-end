@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+
 const Loader = (props) => {
   const [node] = useState(document.createElement('div'));
-  const loader = document.QuerySelector('#loader');
+  const loader = document.querySelector('#loader');
 
   useEffect(() => {
     loader.appendChild(node).classList.add('message');
-  }, [loader, nodel]);
+  }, [loader, node]);
 
   useEffect(() => {
     if (props.show) {
