@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import _ from 'lodash';
 import music from '../images/music.jpeg';
+import { Link } from 'react-router-dom';
 
 const TracksList = ({ tracks }) => {
   console.log(tracks);
@@ -41,6 +42,7 @@ const TracksList = ({ tracks }) => {
               </React.Fragment>
             );
           })}
+
         </div>
       )}
     </React.Fragment>

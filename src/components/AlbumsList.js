@@ -34,6 +34,8 @@ const AlbumsList = ({ albums }) => {
                       </small>
                     </Card.Text>
                   </Card.Body>
+                  <Link to={{pathname: `/chromatify/albumdetails/${album.id}`, state:albums}}>View More</Link>
+
                 </Card>
               </React.Fragment>
             );

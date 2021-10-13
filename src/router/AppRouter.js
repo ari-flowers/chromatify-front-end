@@ -6,6 +6,9 @@ import Dashboard from '../components/Dashboard';
 import NotFoundPage from '../components/NotFoundPage';
 import AlbumDetails from '../components/AlbumDetails';
 import NewTrack from '../components/NewTrack';
+import EditTrack from '../components/EditTrack'
+import CreatedTracksList from '../components/CreatedTracksList'
+
 
 class AppRouter extends React.Component {
   state = {
@@ -63,15 +66,27 @@ class AppRouter extends React.Component {
               )}
             />
             <Route
-              path="/albumdetails"
+              path="/chromatify/albumdetails/:id"
               render={(props) => (
                 <AlbumDetails isValidSession={this.isValidSession} {...props} />
               )}
             />
             <Route
-              path="/newtrack"
+              path="/chromatify/created"
+              render={(props) => (
+                <CreatedTracksList isValidSession={this.isValidSession} {...props} />
+              )}
+            />
+            <Route
+              path="/chromatify/newtrack"
               render={(props) => (
                 <NewTrack isValidSession={this.isValidSession} {...props} />
+              )}
+            />
+            <Route
+              path="/chromatify/:id/edittrack"
+              render={(props) => (
+                <EditTrack isValidSession={this.isValidSession} {...props} />
               )}
             />
             <Route component={NotFoundPage} />

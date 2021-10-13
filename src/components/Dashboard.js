@@ -13,6 +13,7 @@ import SearchResult from './SearchResult';
 import SearchForm from './SearchForm';
 import Header from './Header';
 import Loader from './Loader';
+import NavBar from './NavBar';
 
 const Dashboard = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -74,9 +75,10 @@ const Dashboard = (props) => {
   const result = { albums, artists, playlist, tracks };
 
   return (
-    <React.Fragment>
+    <>
       {isValidSession() ? (
         <div>
+          <NavBar />
           <Header />
           <SearchForm handleSearch={handleSearch} />
           <Loader show={isLoading}>Loading...</Loader>
@@ -98,7 +100,7 @@ const Dashboard = (props) => {
           }}
         />
       )}
-    </React.Fragment>
+    </>
   );
 };
 

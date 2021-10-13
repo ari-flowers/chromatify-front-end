@@ -1,8 +1,6 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
-import _ from 'lodash';
-import music from '../images/music.jpeg';
-import AlbumsList from './AlbumsList'
+import React, { useState } from 'react';
+
+
 
 //define a functional component
 //iterate through each track in an album
@@ -17,49 +15,16 @@ import AlbumsList from './AlbumsList'
 
 //change the onClick to direct to the AlbumDetails page
 // create a route in appRouter.js
-const AlbumDetails = ({ tracks }) => {
-  console.log(tracks);
-  return (
-    //short syntax for fragments is <> </>
+const AlbumDetails = ({albums}) => {
+  const [currentAlbum, setCurrentAlbum] = useState({albums})
+  // const [albums, setAlbums] = useState(album)
+  console.log({albums});
 
-    <>
-      {Object.keys(tracks).length > 0 && (
-        <div className="tracks">
-          {tracks.items.map((track, index) => {
-            return (
-              <React.Fragment key={index}>
-                <Card style={{ width: '18rem' }}>
-                  <a
-                    target="_blank"
-                    href={track.external_urls.spotify}
-                    rel="noopener noreferrer"
-                    className="card-image-link"
-                  >
-                    {!_.isEmpty(track.album.images) ? (
-                      <Card.Img
-                        variant="top"
-                        src={track.album.images[0].url}
-                        alt=""
-                      />
-                    ) : (
-                      <img src={music} alt="" />
-                    )}
-                  </a>
-                  <Card.Body>
-                    <Card.Title>{track.name}</Card.Title>
-                    <Card.Text>
-                      <small>
-                        {track.artists.map((artist) => artist.name).join(', ')}
-                      </small>
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </React.Fragment>
-            );
-          })}
-        </div>
-      )}
+  return (<>
+    <h1>Testing Detail...</h1>
     </>
-  );
-};
+  )
+}
+
+
 export default AlbumDetails;

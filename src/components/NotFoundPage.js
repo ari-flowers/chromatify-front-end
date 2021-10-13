@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import Header from './Header';
 const NotFoundPage = () => {
   return (
-    <React.Fragment>
+    <>
       <Header />
-      Page not found. Goto <Link to="/dashboard">Home Page</Link>
-    </React.Fragment>
+      Page not found.
+      <Link to="/dashboard">Home Page</Link>
+      <Link to="/chromatify/newtrack">Add A Track</Link>
+      <Link to="/chromatify/created">View Added Tracks</Link>
+    </>
   );
 };
 export default NotFoundPage;
