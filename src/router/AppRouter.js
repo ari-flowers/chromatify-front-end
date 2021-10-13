@@ -4,6 +4,8 @@ import Home from '../components/Home';
 import RedirectPage from '../components/RedirectPage';
 import Dashboard from '../components/Dashboard';
 import NotFoundPage from '../components/NotFoundPage';
+import AlbumDetails from '../components/AlbumDetails';
+import NewTrack from '../components/NewTrack';
 
 class AppRouter extends React.Component {
   state = {
@@ -58,6 +60,18 @@ class AppRouter extends React.Component {
               path="/dashboard"
               render={(props) => (
                 <Dashboard isValidSession={this.isValidSession} {...props} />
+              )}
+            />
+            <Route
+              path="/albumdetails"
+              render={(props) => (
+                <AlbumDetails isValidSession={this.isValidSession} {...props} />
+              )}
+            />
+            <Route
+              path="/newtrack"
+              render={(props) => (
+                <NewTrack isValidSession={this.isValidSession} {...props} />
               )}
             />
             <Route component={NotFoundPage} />

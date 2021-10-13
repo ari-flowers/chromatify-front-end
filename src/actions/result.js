@@ -4,7 +4,9 @@ import {
   SET_ARTISTS,
   ADD_ARTISTS,
   SET_PLAYLIST,
-  ADD_PLAYLIST
+  ADD_PLAYLIST,
+  SET_TRACKS,
+  ADD_TRACKS
 } from '../utils/constants';
 import { get } from '../utils/api';
 export const setAlbums = (albums) => ({
@@ -31,17 +33,27 @@ export const addPlaylist = (playlists) => ({
   type: ADD_PLAYLIST,
   playlists
 });
+export const setTracks = (tracks) => ({
+  type: SET_TRACKS,
+  tracks
+});
+export const addTracks = (tracks) => ({
+  type: ADD_TRACKS,
+  tracks
+});
 export const initiateGetResult = (searchTerm) => {
   return async (dispatch) => {
     try {
       const API_URL = `https://api.spotify.com/v1/search?query=${encodeURIComponent(
         searchTerm
-      )}&type=album,playlist,artist`;
+      )}&type=album,playlist,artist,track`;
       const result = await get(API_URL);
       console.log(result);
-      const { albums, artists, playlists } = result;
+      const { albums, artists, playlists, tracks } = result;
       dispatch(setAlbums(albums));
       dispatch(setArtists(artists));
+      //unsure here, ask for help if needed about dispatch
+      dispatch(setTracks(tracks));
       return dispatch(setPlayList(playlists));
     } catch (error) {
       console.log('error', error);
@@ -79,6 +91,18 @@ export const initiateLoadMorePlaylist = (url) => {
       const result = await get(url);
       console.log('categoriess', result);
       return dispatch(addPlaylist(result.playlists));
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+};
+export const initiateLoadMoreTracks = (url) => {
+  return async (dispatch) => {
+    try {
+      console.log('url', url);
+      const result = await get(url);
+      console.log('categoriess', result);
+      return dispatch(addTracks(result.tracks));
     } catch (error) {
       console.log('error', error);
     }
