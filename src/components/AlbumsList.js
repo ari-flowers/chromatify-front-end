@@ -4,13 +4,14 @@ import _ from 'lodash';
 import music from '../images/music.jpeg';
 import { Link } from 'react-router-dom';
 //change a tag to go to details page
-const AlbumsList = ({ albums }) => {
-  console.log(albums);
+const AlbumsList = ({ albums, artists }) => {
+  console.log("artists test", artists);
   return (
     <React.Fragment>
       {Object.keys(albums).length > 0 && (
         <div className="albums">
           {albums.items.map((album, index) => {
+
             return (
               <React.Fragment key={index}>
                 <Card style={{ width: '18rem' }}>
@@ -34,7 +35,7 @@ const AlbumsList = ({ albums }) => {
                       </small>
                     </Card.Text>
                   </Card.Body>
-                  <Link to={{pathname: `/chromatify/albumdetails/${album.id}`, state:albums}}>View More</Link>
+                  <Link to={{pathname: `/chromatify/albumdetails/${album.id}`, state:{albums, artists}}}>View More</Link>
 
                 </Card>
               </React.Fragment>

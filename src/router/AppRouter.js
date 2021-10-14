@@ -5,6 +5,7 @@ import RedirectPage from '../components/RedirectPage';
 import Dashboard from '../components/Dashboard';
 import NotFoundPage from '../components/NotFoundPage';
 import AlbumDetails from '../components/AlbumDetails';
+import TrackDetails from '../components/TrackDetails';
 import NewTrack from '../components/NewTrack';
 import EditTrack from '../components/EditTrack'
 import CreatedTracksList from '../components/CreatedTracksList'
@@ -45,48 +46,54 @@ class AppRouter extends React.Component {
             <Route
               path="/"
               exact={true}
-              render={(props) => (
-                <Home isValidSession={this.isValidSession} {...props} />
+              render={(renderProps) => (
+                <Home isValidSession={this.isValidSession} {...renderProps} />
               )}
             />
             <Route
               path="/redirect"
-              render={(props) => (
+              render={(renderProps) => (
                 <RedirectPage
                   isValidSession={this.isValidSession}
                   setExpiryTime={this.setExpiryTime}
-                  {...props}
+                  {...renderProps}
                 />
               )}
             />
             <Route
               path="/dashboard"
-              render={(props) => (
-                <Dashboard isValidSession={this.isValidSession} {...props} />
+              render={(renderProps) => (
+                <Dashboard isValidSession={this.isValidSession} {...renderProps} />
               )}
             />
             <Route
               path="/chromatify/albumdetails/:id"
-              render={(props) => (
-                <AlbumDetails isValidSession={this.isValidSession} {...props} />
+              render={(renderProps) => (
+                <AlbumDetails isValidSession={this.isValidSession} {...renderProps} />
+              )}
+            />
+            <Route
+              path="/chromatify/trackdetails/:id"
+              render={(renderProps) => (
+                <TrackDetails isValidSession={this.isValidSession} {...renderProps} />
               )}
             />
             <Route
               path="/chromatify/created"
-              render={(props) => (
-                <CreatedTracksList isValidSession={this.isValidSession} {...props} />
+              render={(renderProps) => (
+                <CreatedTracksList isValidSession={this.isValidSession} {...renderProps} />
               )}
             />
             <Route
               path="/chromatify/newtrack"
-              render={(props) => (
-                <NewTrack isValidSession={this.isValidSession} {...props} />
+              render={(renderProps) => (
+                <NewTrack isValidSession={this.isValidSession} {...renderProps} />
               )}
             />
             <Route
               path="/chromatify/:id/edittrack"
-              render={(props) => (
-                <EditTrack isValidSession={this.isValidSession} {...props} />
+              render={(renderProps) => (
+                <EditTrack isValidSession={this.isValidSession} {...renderProps} />
               )}
             />
             <Route component={NotFoundPage} />
