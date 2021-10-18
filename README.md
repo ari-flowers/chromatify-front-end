@@ -1,10 +1,12 @@
 # Chromatify
+chromatify.surge.sh
 
 # Description
 Chromatify is a simplified Spotify search app utilizing OAuth to access Spotify's API to display results.
 
 # Brief Example
-When the backend server is running successfully at http://localhost:3000/dashboard you will see the site's landing page.
+When the backend server is running successfully at http://localhost:3000/dashboard you will see the site's landing page. From here you can type in a search and view results:
+
 ![image](https://i.imgur.com/3tiwj84.png)
 # List of Features / User Stories
 
