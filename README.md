@@ -5,10 +5,10 @@ Chromatify is a simplified Spotify search app utilizing OAuth to access Spotify'
 
 # Brief Example
 When the backend server is running successfully at http://localhost:3000/dashboard you will see the site's landing page.
-
+![image](../planning/preview.png)
 # List of Features / User Stories
 
-###MVP (Bronze)
+### MVP (Bronze)
 ASU I want to sign in using my Spotify account and gain access to Spotify's API.
 ASU I want to search for songs, artists, albums, and playlists and have them show up in their respective categories.
 If I don't see what I'm looking for, I want to add entries that can viewed on a separate page.
@@ -36,7 +36,7 @@ The ultimate goal of Chromatify is to give DJs and playlist curators another dim
 Some of the current CSS is in a funky state. The navbar does not sit flush against the top and sides of the page.
 
 Spotify's API is more complicated than expected and in-app details pages were planned, but postponed.
- 
+
 # List of Technologies Used
 HTML, CSS, JavaScript, React, Redux, OAuth, Bootstrap
 
