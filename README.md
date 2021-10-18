@@ -5,7 +5,7 @@ Chromatify is a simplified Spotify search app utilizing OAuth to access Spotify'
 
 # Brief Example
 When the backend server is running successfully at http://localhost:3000/dashboard you will see the site's landing page.
-![image](../planning/preview.png)
+![image](https://i.imgur.com/3tiwj84.png)
 # List of Features / User Stories
 
 ### MVP (Bronze)
