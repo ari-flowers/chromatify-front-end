@@ -51,10 +51,10 @@ const NewTrack = (props) => {
         <label htmlFor="artistName">Artist:</label>
         <input id="artistName" name="artistName" value={input.artistName} onChange={handleChange} />
 
-        <input type = 'submit' value = 'Add A Track!' />
+        <input type = 'submit' value = 'Add Track' />
       </form>
-      <Button variant="info" type="submit"><Link to="/chromatify/created">View Added Tracks </Link></Button>
-      <Button variant="info" type="submit"><Link to="/dashboard">Return To Search</Link></Button>
+    
+      <Button variant="info" type="submit"><Link to="/dashboard">To Search</Link></Button>
     </div>
 
   )

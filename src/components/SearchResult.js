@@ -89,7 +89,7 @@ const SearchResult = (props) => {
       {!_.isEmpty(result[selectedCategory]) &&
         !_.isEmpty(result[selectedCategory].next) && (
           <div className="load-more" onClick={() => loadMore(selectedCategory)}>
-            <Button variant="info" type="button">
+            <Button class="button-color" type="button">
               Load More
             </Button>
           </div>

@@ -6,12 +6,12 @@ import { Button, Navbar, Container, Nav } from 'react-bootstrap';
 const NavBar = (props) => {
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
+      <Navbar className="color-nav" variant="dark">
         <Container>
         <Navbar.Brand href="/">
          <img
            alt=""
-           src=""
+           src="https://i.imgur.com/GWB36eY.png"
            width="40"
            height="40"
            className="d-inline-block align-top"

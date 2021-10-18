@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from './NavBar'
-import { Button } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 
 const CreatedTracksList = (props) => {
   const [tracks, setTracks] = useState([])
@@ -42,10 +42,13 @@ const CreatedTracksList = (props) => {
     <NavBar />
     <h1>User Added Tracks</h1>
     <main>
+    <Table striped bordered hover variant="light" className="list-table">
       <thead>
         <tr>
           <th>Name</th>
           <th>Artist</th>
+          <th>Edit</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -53,12 +56,14 @@ const CreatedTracksList = (props) => {
         <tr key={track._id}>
           <td>{track.trackName}</td>
           <td>{track.artistName}</td>
-          <td onClick={() => handleDelete(track._id)} className="delete-x">X</td>
           <Link to={`/chromatify/${track._id}/edittrack`}>Edit</Link>
+          <td onClick={() => handleDelete(track._id)} className="delete">Delete</td>
+
         </tr>
       ))}
       </tbody>
-      <Button variant="info" type="submit"><Link to='/chromatify/newtrack'>Add A New Track</Link></Button>
+      </Table>
+      <Button variant="info" type="submit"><Link to='/chromatify/newtrack'>Add Track</Link></Button>
     </main>
     </>
   )

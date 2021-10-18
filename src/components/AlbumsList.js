@@ -16,7 +16,12 @@ const AlbumsList = ({ albums, artists }) => {
               <React.Fragment key={index}>
                 <Card style={{ width: '18rem' }}>
                 {/* Changed external a tag to Link to /albumdetails, however the page doesnt render properly. Ask for help here! */}
-                  <Link to="/albumdetails">
+                <a
+                  target="_blank"
+                  href={album.external_urls.spotify}
+                  rel="noopener noreferrer"
+                  className="card-image-link"
+                >
                     {!_.isEmpty(album.images) ? (
                       <Card.Img
                         variant="top"
@@ -26,7 +31,7 @@ const AlbumsList = ({ albums, artists }) => {
                     ) : (
                       <img src={music} alt="" />
                     )}
-                  </Link>
+                  </a>
                   <Card.Body>
                     <Card.Title>{album.name}</Card.Title>
                     <Card.Text>
@@ -35,7 +40,7 @@ const AlbumsList = ({ albums, artists }) => {
                       </small>
                     </Card.Text>
                   </Card.Body>
-                  <Link to={{pathname: `/chromatify/albumdetails/${album.id}`, state:{albums, artists}}}>View More</Link>
+                  {/* <Link to={{pathname: `/chromatify/albumdetails/${album.id}`, state:{albums, artists}}}>View More</Link> */}
 
                 </Card>
               </React.Fragment>

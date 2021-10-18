@@ -28,6 +28,7 @@ const AlbumDetails = () => {
     <>
     <NavBar />
     <h1>Albums Detail</h1>
+    <p>{albums.items[0].name}</p>
 
     </>
   )

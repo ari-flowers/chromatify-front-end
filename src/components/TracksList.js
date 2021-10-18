@@ -42,7 +42,7 @@ const TracksList = ({ tracks }) => {
                       </small>
                     </Card.Text>
                   </Card.Body>
-                    <Link to={{pathname: `/chromatify/trackdetails/${track.id}`, state:{track:{...data}}}}>View More</Link>
+                    {/*<Link to={{pathname: `/chromatify/trackdetails/${track.id}`, state:{track:{...data}}}}>View More</Link>*/}
                 </Card>
               </React.Fragment>
             );

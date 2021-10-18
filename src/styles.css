@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #f3f4f6;
+  background: #B8E1FF;
   font-family: 'Montserrat', -apple-system, system-ui, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 20px;
@@ -16,10 +16,20 @@ body {
   color: #778298;
 }
 
+a {
+  text-decoration: none;
+}
+
+.delete:hover {
+  cursor: pointer;
+}
 .btn {
   letter-spacing: 1px;
 }
 
+/* td.delete {
+  padding-left: 15px;
+} */
 .login {
   display: flex;
   flex-direction: column;
@@ -111,6 +121,15 @@ body {
   margin-top: 0.5rem;
 }
 
+.button-color {
+  margin-top: 10px;
+  background-color: #B0FCC1;
+  border: 2px solid #566273;
+  color: #778298;
+  padding: 5px;
+  padding-left: 5px;
+  border-radius: 4px;
+}
 .search-buttons {
   margin: 2rem 0;
   display: flex;
@@ -140,6 +159,7 @@ body {
 }
 
 .card {
+  background-color: #E1A3BC;
   margin: 1rem;
   box-shadow: 0 2px 7px 3px #949ca5;
 }
@@ -153,7 +173,17 @@ body {
   max-width: 250px;
   height: 250px;
 }
+img.card-img-top {
+  margin-top: 0;
+}
 
+.navbar {
+  margin-bottom: 30px;
+}
+
+.color-nav {
+  background-color: #BCB6FF;
+}
 @media screen and (max-width: 400px) {
   .search-buttons {
     flex-direction: column;
