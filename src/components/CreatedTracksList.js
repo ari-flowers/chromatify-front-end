@@ -56,7 +56,7 @@ const CreatedTracksList = (props) => {
         <tr key={track._id}>
           <td>{track.trackName}</td>
           <td>{track.artistName}</td>
-          <Link to={`/chromatify/${track._id}/edittrack`}>Edit</Link>
+          <td><Link to={`/chromatify/${track._id}/edittrack`}>Edit</Link></td>
           <td onClick={() => handleDelete(track._id)} className="delete">Delete</td>
 
         </tr>

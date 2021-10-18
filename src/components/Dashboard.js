@@ -79,6 +79,7 @@ const Dashboard = (props) => {
       {isValidSession() ? (
         <div>
           <NavBar />
+          <main className="">
           <Header />
           <SearchForm handleSearch={handleSearch} />
           <Loader show={isLoading}>Loading...</Loader>
@@ -89,6 +90,7 @@ const Dashboard = (props) => {
             selectedCategory={selectedCategory}
             isValidSession={isValidSession}
           />
+          </main>
         </div>
       ) : (
         <Redirect

@@ -6,8 +6,8 @@ import { Button, Navbar, Container, Nav } from 'react-bootstrap';
 const NavBar = (props) => {
   return (
     <div>
-      <Navbar className="color-nav" variant="dark">
-        <Container>
+      <Navbar  className="color-nav" variant="dark">
+
         <Navbar.Brand href="/">
          <img
            alt=""
@@ -22,7 +22,7 @@ const NavBar = (props) => {
             <Nav.Link href="/chromatify/created">Added Tracks</Nav.Link>
             <Nav.Link href="/chromatify/newtrack">Add Track</Nav.Link>
           </Nav>
-        </Container>
+
       </Navbar>
     </div>
   )

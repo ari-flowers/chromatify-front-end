@@ -36,7 +36,7 @@ const SearchForm = (props) => {
             autoComplete="off"
           />
         </Form.Group>
-        <button class="button-color" type="submit">
+        <button className="button-color" type="submit">
           Search
         </button>
       </Form>

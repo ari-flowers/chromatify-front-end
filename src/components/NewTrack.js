@@ -27,7 +27,7 @@ const NewTrack = (props) => {
       }
       const createdTrack = await fetch('http://localhost:9000/chromatify', config)
       const parsed = await createdTrack.json()
-      props.history.push('/chromatify')
+      props.history.push('/chromatify/created')
 
     } catch(err) {
       console.log(err);
@@ -41,7 +41,7 @@ const NewTrack = (props) => {
   }
 
   return (
-    <div class="new-form">
+    <div className="new-form">
       <NavBar />
       <h1>Couldn't find a track on Spotify? Add it here!</h1>
       <form onSubmit = {handleSubmit}>
@@ -53,7 +53,7 @@ const NewTrack = (props) => {
 
         <input type = 'submit' value = 'Add Track' />
       </form>
-    
+
       <Button variant="info" type="submit"><Link to="/dashboard">To Search</Link></Button>
     </div>
 
