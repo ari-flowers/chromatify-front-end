@@ -3,7 +3,8 @@ import { Card } from 'react-bootstrap';
 import _ from 'lodash';
 import music from '../images/music.jpeg';
 import { Link } from 'react-router-dom';
-//change a tag to go to details page
+
+
 const AlbumsList = ({ albums, artists }) => {
   console.log("artists test", artists);
   return (
@@ -15,7 +16,6 @@ const AlbumsList = ({ albums, artists }) => {
             return (
               <React.Fragment key={index}>
                 <Card style={{ width: '18rem' }}>
-                {/* Changed external a tag to Link to /albumdetails, however the page doesnt render properly. Ask for help here! */}
                 <a
                   target="_blank"
                   href={album.external_urls.spotify}

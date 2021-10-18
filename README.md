@@ -53,3 +53,9 @@ On your local machine:
     npm i
   followed by:
     npm start
+
+# Special Thanks
+
+I would not have known where to start on this project if not for the [tutorial](https://levelup.gitconnected.com/how-to-create-a-spotify-music-search-app-in-react-1d71c8007e45) by Yogesh Chavan.
+
+This gave me the base code for the React front end that I was able to play with and explore to learn about redux and OAuth with Spotify's API. Big ups!
